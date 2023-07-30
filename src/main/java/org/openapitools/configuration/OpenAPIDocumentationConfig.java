@@ -36,7 +36,7 @@ public class OpenAPIDocumentationConfig {
     }
 
     @Bean
-    public Docket customImplementation(ServletContext servletContext, @Value("${openapi.swaggerPetstoreOpenAPI30.base-path:/api/v3}") String basePath) {
+    public Docket customImplementation(ServletContext servletContext, @Value("${openapi.swaggerPetstoreOpenAPI30.base-path:/}") String basePath) {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                     .apis(RequestHandlerSelectors.basePackage("org.openapitools.api"))
